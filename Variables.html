@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script Variables</title>
+</head>
+<body>
+    <h1>Java Script Variables</h1>
+
+    <script>
+        console.log("JavaScript Variables");
+        console.log('/////////////////////////////////////////////////////////////');
+
+        let x = 5;
+        let z = 15; // Declare a variable using let
+
+            function f(){
+                if (true) {
+                    let w = 20;
+                    var y = 10; // Declare a variable using let inside a block
+                    console.log("True " + y); // Output: 10
+                }
+                
+                console.log(z);
+                //console.log(w); // This will throw an error because w is not defined outside the block
+            }
+            f();
+            // Output: 10
+
+            console.log(x); // Output: 5
+
+
+
+            console.log('/////////////////////////////////////////////////////////////'); 
+
+            const a = {
+                prop1:30,
+                prop2:40
+            }
+
+            a.prop1 = 50; // This is allowed because we are changing the property of the object
+
+            
+        
+    </script>
+
+    <p>Press f12 for see the output in console view.</p>
+</body>
+</html>
