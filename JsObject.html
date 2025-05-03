@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script Objects</title>
+</head>
+<body>
+    <h1>Java Script Objects</h1>
+
+    <p id="demo""></p>
+
+    
+    <script>
+
+
+        const Animal ={
+            type : "Insect",
+
+            displayType(){
+                console.log(this.type);
+            }
+        }
+
+        // Creating an object using Object.create()
+        const animal1 = Object.create(Animal);
+        animal1.displayType();
+
+        const dog = Object.create(Animal);
+        dog.type = "Dog";
+        dog.displayType();
+        // Output: Dog
+
+        const cat = Object.create(Animal);
+        cat.type = "Cat";
+        cat.displayType();
+        
+    </script>
+</body>
+</html>
