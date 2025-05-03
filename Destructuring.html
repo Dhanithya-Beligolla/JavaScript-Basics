@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Destructuring</title>
+</head>
+<body>
+    <h1>JavaScript Destructuring</h1>
+
+    <p id="demo"></p>
+
+    <script>
+
+        console.log("JavaScript Destructuring");
+        function calculation(a,b){
+
+            // Destructuring the array returned by the function
+            const add = a + b;
+            const sub = a - b;
+            const mul = a * b;
+            const div = a / b;
+
+
+            // Return an object with the results
+            return [add, sub, mul, div];
+        }
+
+        const [add, sub, mul, div] = calculation(10, 5);
+        console.log("Addition: " + add);
+        console.log("Subtraction: " + sub);
+        console.log("Multiplication: " + mul);
+        console.log("Division: " + div);
+
+        document.writeln("Addition: " + add + "<br>");
+        document.writeln("Subtraction: " + sub + "<br>");
+        document.writeln("Multiplication: " + mul + "<br>");
+        document.writeln("Division: " + div + "<br>");
+
+
+        console.log("////////////////////////////////////////////////////////////////////////////////////////////////////////");
+
+        const vehicleOne = {
+            brand: 'Ford', 
+            model: 'Mustang', 
+            type: 'car', 
+            year: 2021, 
+            color: 'red', 
+            registration: {
+                city: 'Houston', 
+                state: 'Texas', 
+                country: 'USA'
+            }
+        }
+
+        myVehicle(vehicleOne)
+
+        function myVehicle({model,registration:{state}}) {
+            const message = 'My ' + model + ' is registered in ' + state + '•';
+            document.getElementById ("demo").innerHTML = message;
+            console.log(message);
+        }
+
+
+    </script>
+</body>
+</html>
