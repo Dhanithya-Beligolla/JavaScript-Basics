@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script Closure</title>
+</head>
+<body>
+    <h1>Java Script Closure</h1>
+
+    <p id="demo""></p>
+
+    <script>
+        console.log("JavaScript Closure");
+
+        function greeting(name) {
+            let message = "Hello";
+
+            function sayHello() {
+                console.log(message + " " + name);
+            }
+            return sayHello;
+        }
+
+        let hi = greeting("John");
+        hi(); // Output: Hello John
+    </script>
+</body>
+</html>
