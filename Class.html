@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class</title>
+</head>
+<body>
+    <h1>Java Scipt Class</h1>
+    <p id="demo"></p>
+
+    <script>
+        console.log("JavaScript Class");
+
+        class Person{
+            constructor(name, age){
+                this.name = name;
+                this.age = age;
+            }
+            present(){
+                return 'Hello, I am ' + this.name + ' and I am ' + this.age + ' years old.';
+            }
+        };
+
+        
+
+        // Creating an object using the class
+        const p1 = new Person("John", "25");
+        document.writeln(p1.present()+ "<br>");
+        // Output: Hello, I am John and I am 25 years old.
+
+        class Car {
+            constructor(brand){
+                this.brand = brand;
+                
+                
+            }
+
+            display(){
+                return ' I have a ' + this.brand;
+            }
+        }
+
+        class Model extends Car {
+            constructor(brand, model){
+                super(brand);
+                this.model = model;
+            }
+
+            show(){
+                return  this.display() + ' ' +  this.model + '.';
+            }
+        }
+
+        // Creating an object using the class
+        const myCar = new Model("Ford", "Mustang");
+        document.writeln(myCar.show());
+        // Output: I have a Ford Mustang.
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
